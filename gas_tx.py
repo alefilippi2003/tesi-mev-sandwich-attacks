@@ -1,6 +1,6 @@
 import pandas as pd
 
-# 1. Carica il tuo dataset (sostituisci 'il_tuo_file.csv' con il percorso del tuo file)
+# 1. Carica il tuo dataset 
 df = pd.read_csv('ECONOMIA_apr_mag_26.csv')
 
 # 2. Creiamo il DataFrame per le transazioni "FRONT"
