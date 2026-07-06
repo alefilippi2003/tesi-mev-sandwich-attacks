@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# 1. Funzione matematica infallibile per arrotondare a 5 cifre significative
+# 1. Funzione matematica per arrotondare a 5 cifre significative
 def arrotonda_cifre_significative(x, cifre=5):
     if x == 0 or pd.isna(x):
         return 0
@@ -14,7 +14,7 @@ def arrotonda_cifre_significative(x, cifre=5):
 df = pd.read_csv('risultati_scambi_token_2026.csv', on_bad_lines='skip')
 df['quantita_grezza'] = pd.to_numeric(df['quantita_grezza'], errors='coerce').fillna(0)
 
-# 3. Applica l'arrotondamento PREVENTIVO per uccidere il "dust"
+# 3. Applica l'arrotondamento preventivo per uccidere il "dust"
 df['quantita_approssimata'] = df['quantita_grezza'].apply(lambda x: arrotonda_cifre_significative(x, 5))
 
 # Recuperiamo gli hash front e back per ogni coppia per averli nel report finale
