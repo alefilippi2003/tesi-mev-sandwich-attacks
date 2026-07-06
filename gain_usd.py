@@ -35,7 +35,6 @@ df_finale['usd_fee_back'] = df_finale['usd_fee_back'].fillna(0)
 df_finale['gain'] = df_finale['profitto_USD'] - df_finale['usd_fee_front'] - df_finale['usd_fee_back']
 
 # 6. Salva in un nuovo file CSV
-# Lo salvo come compresso per sicurezza, visti i tuoi precedenti limiti di quota!
 df_finale.to_csv('guadagni_finali_weth_26.csv', index=False)
 
 print("Processo completato! Il file è stato salvato.")
