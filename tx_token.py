@@ -18,8 +18,6 @@ if not web3.is_connected():
     print("Errore critico: Impossibile connettersi ad Alchemy.")
     exit()
 
-print("Inizio ESTRAZIONE MASSIVA (Preparati, ci vorrà un po')...")
-
 # ==========================================
 # 2. FUNZIONE DI DECODIFICA DEI LOGS
 # ==========================================
