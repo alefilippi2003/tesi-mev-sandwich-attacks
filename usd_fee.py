@@ -2,10 +2,7 @@ import pandas as pd
 import yfinance as yf
 
 # 1. Carica il dataset 
-# (Se hai salvato il file compresso come ti ho suggerito prima, usa questo:)
 df = pd.read_csv('gas_front_back_26.csv')
-# (Altrimenti, se hai risolto lo spazio e salvato normalmente, de-commenta la riga sotto:)
-# df = pd.read_csv('gas_front_back.csv')
 
 # 2. Crea una colonna temporanea estraendo solo la Data (senza orario e timezone)
 df['date'] = pd.to_datetime(df['block_time']).dt.date
