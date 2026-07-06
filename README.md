@@ -2,7 +2,7 @@
 
 Questa repository contiene l'intera pipeline di *Data Engineering* sviluppata a supporto del lavoro di Tesi di Laurea. Il codice sorgente illustra l'estrazione, la pulizia e la valorizzazione economica dei dati relativi ai *Sandwich Attacks* sulla blockchain di Ethereum.
 
-## 📂 Struttura del Progetto e Pipeline dei Dati
+## Struttura del Progetto e Pipeline dei Dati
 
 Il flusso di lavoro è suddiviso nei seguenti script, progettati per essere eseguiti in ordine sequenziale:
 
