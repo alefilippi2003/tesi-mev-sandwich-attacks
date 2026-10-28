@@ -1,11 +1,12 @@
+import os
 import pandas as pd
 from dune_client.client import DuneClient
 
 # ==========================================
 # 1. I TUOI DATI
 # ==========================================
-DUNE_API_KEY = "{api_key_dune}"
-QUERY_ID = {query_id_dune}  # Sostituisci con il tuo Query ID
+DUNE_API_KEY = os.environ["DUNE_API_KEY"]
+QUERY_ID = int(os.environ["DUNE_QUERY_ID"])  # ID della query sandwitch_query.sql su Dune
 
 try:
     print(f"Connessione al server API (Query ID: {QUERY_ID})...")

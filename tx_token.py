@@ -1,11 +1,12 @@
 import csv
+import os
 import time
 from web3 import Web3
 
 # ==========================================
 # 1. CONFIGURAZIONE
 # ==========================================
-alchemy_url = "https://eth-mainnet.g.alchemy.com/v2/{api_key_alchemy}"
+alchemy_url = f"https://eth-mainnet.g.alchemy.com/v2/{os.environ['ALCHEMY_API_KEY']}"
 web3 = Web3(Web3.HTTPProvider(alchemy_url))
 
 file_input = 'hash_tx_2026.csv'

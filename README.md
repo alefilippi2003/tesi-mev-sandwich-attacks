@@ -23,3 +23,28 @@ Il flusso di lavoro è suddiviso nei seguenti script, progettati per essere eseg
 
 ### Fase 5: Consolidamento Finale
 * **`gain_usd.py`**: Ultimo modulo della pipeline. Attraverso operazioni di *Left Join*, ricongiunge i profitti in USD con i rispettivi costi di *front-run* e *back-run*. Gestisce la normalizzazione dei valori mancanti e calcola il differenziale definitivo (*Net Gain*).
+
+## Esecuzione
+
+Richiede Python 3.10+ e un account [Dune](https://dune.com) e [Alchemy](https://www.alchemy.com).
+
+```bash
+pip install -r requirements.txt
+export DUNE_API_KEY=...       # chiave API Dune
+export DUNE_QUERY_ID=...      # ID della query sandwitch_query.sql salvata su Dune
+export ALCHEMY_API_KEY=...    # chiave API Alchemy (Ethereum mainnet)
+
+python api_results.py   # Fase 1
+python tx_token.py      # Fase 2
+python token_gain.py
+python gas_tx.py        # Fase 3
+python weth_to_usd.py   # Fase 4
+python usd_fee.py
+python gain_usd.py      # Fase 5
+```
+
+I CSV intermedi e finali non sono inclusi nella repository.
+
+## Licenza
+
+MIT
